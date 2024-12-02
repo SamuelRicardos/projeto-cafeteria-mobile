@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormCadastro">
+
+    <ImageButton
+        android:id="@+id/ButtonBackCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:contentDescription="Voltar"
+        android:src="@drawable/ic_voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/TextViewCadastroCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formulário de cadastro"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonBackCadastro" />
+
+    <View
+        android:id="@+id/containerComponentsCadastro"
+        style="@style/containerComponents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewCadastroCadastro" />
+
+    <EditText
+        android:id="@+id/EditTextNomeCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Nome"
+        style="@style/Edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentsCadastro"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentsCadastro"
+        app:layout_constraintTop_toTopOf="@+id/containerComponentsCadastro" />
+
+    <EditText
+        android:id="@+id/EditTextEmailCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:drawableLeft="@drawable/ic_email"
+        style="@style/Edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentsCadastro"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentsCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextNomeCadastro" />
+
+    <EditText
+        android:id="@+id/EditTextSenhaCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Senha"
+        android:drawableLeft="@drawable/ic_lock"
+        style="@style/Edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentsCadastro"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentsCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextEmailCadastro" />
+    <EditText
+        android:id="@+id/EditTextSenha2Cadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Repetir Senha"
+        android:drawableLeft="@drawable/ic_lock"
+        style="@style/Edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentsCadastro"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentsCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextSenhaCadastro" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_cadastrarCadastro"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Cadastrar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentsCadastro"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentsCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextSenha2Cadastro" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
